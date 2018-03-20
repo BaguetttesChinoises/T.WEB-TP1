@@ -4,12 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Random number</title>
+<title>scriplet</title>
 </head>
 <body>
 	<%
-		double  i = Math.random();
 	%>
-	<h2>A random number = <%= i %> </h2>
 </body>
 </html>
