@@ -46,16 +46,19 @@ public class ShowSession extends HttpServlet {
 			if (t.isNew()== true){
 				t.setAttribute("account",1);
 				show.println("<h1> Welcome on my site!</h1>");
-				show.println("<h2> Nombre de visiteur :  </h2>" + );
+				show.println("<h2> Nombre de visiteur :" + t.getAttribute("account") + "!</h2>" );
 			}
 			
 			else {
-				t.setAttribute("account",1);
+				int cpt = (int)t.getAttribute("account");
+				cpt++;
+				t.setAttribute("account", cpt);
 				show.println("<h1> Welcome back </h1>");
+				show.println("<h2> Nombre de visites :" + t.getAttribute("account") + " .</h2>" );
 
 			}
 			show.println("<br>");
-			show.println("<h2> Il y a " + cpt + " visiteurs </h2>");
+			//show.println("<h2> Il y a " + cpt + " visiteurs </h2>");
 			show.println("</body></html>");
 			show.close();		
 		
