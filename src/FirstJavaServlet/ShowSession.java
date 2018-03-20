@@ -38,18 +38,21 @@ public class ShowSession extends HttpServlet {
 		PrintWriter show = response.getWriter();
 		
 		HttpSession t = request.getSession(true);
-		
 
 			show.println("<HTML>");
 			show.println("<Head><Title>MonServer TP1</title></head>");
 			show.println("<body>");
-			if (t.isNew()== true) {
+			
+			if (t.isNew()== true){
+				t.setAttribute("account",1);
 				show.println("<h1> Welcome on my site!</h1>");
-				cpt +=1;
+				show.println("<h2> Nombre de visiteur :  </h2>" + );
 			}
+			
 			else {
+				t.setAttribute("account",1);
 				show.println("<h1> Welcome back </h1>");
-				cpt +=1;
+
 			}
 			show.println("<br>");
 			show.println("<h2> Il y a " + cpt + " visiteurs </h2>");
