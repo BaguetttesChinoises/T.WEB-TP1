@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class SecondeServlet
  */
-@WebServlet("/Servlet")
+@WebServlet("/FormServlet")
 
 public class FirstJavaServlet extends HttpServlet {
 	

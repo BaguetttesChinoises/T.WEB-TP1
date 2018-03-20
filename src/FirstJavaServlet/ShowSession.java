@@ -17,7 +17,6 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Servlet ShowSession")
 
 public class ShowSession extends HttpServlet {
-	int cpt = 0;
 	
 	
 	/**
