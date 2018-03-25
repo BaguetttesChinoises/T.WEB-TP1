@@ -1,46 +1,62 @@
 package lab.mvc.model;
 
-import java.util.Date;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 
-public class Person {
-	private String firstName;
-	private String lastName;
-	private Date birthDay;
-	private String sex;
+/**
+ * Servlet implementation class Person
+ */
+@WebServlet("/Person")
+public class Person extends HttpServlet {
 	
-	public Person(String firstName, String lastName, Date birthDay, String sex) {
+    private String Nom;
+    private String Prénom;
+    private String Date_de_Naissance;
+    private String Sex;
+    
+    public String getNom() {
+        return Nom;
+    }
+    public void setNom(String Nom) {
+        this.Nom = Nom;
+    }
+    
+    public String getPrénom() {
+        return Prénom;
+    }
+    public void setPrénom(String Prénom) {
+        this.Prénom = Prénom; 
+    }
+    public String getDate_de_Naissance() {
+        return Date_de_Naissance;
+    }
+    public void setDate_de_Naissance(String Date_de_Naissance) {
+        this.Date_de_Naissance = Date_de_Naissance;
+    }
+    public String getSex() {
+        return Sex;
+    }
+    public void setSex(String Sex) {
+        this.Sex = Sex; 
+    }
+
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Person() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+	public Person(String nom, String prénom, String date_de_Naissance, String sex) {
 		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.birthDay = birthDay;
-		this.sex = sex;
+		Nom = nom;
+		Prénom = prénom;
+		Date_de_Naissance = date_de_Naissance;
+		Sex = sex;
 	}
-	
-	public String getFirstName() {
-		return firstName;
-	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	public Date getBirthDay() {
-		return birthDay;
-	}
-	public void setBirthDay(Date birthDay) {
-		this.birthDay = birthDay;
-	}
-	public String getSex() {
-		return sex;
-	}
-	public void setSex(String sex) {
-		this.sex = sex;
-	}
-	
-	
+    
+    
 
 }
