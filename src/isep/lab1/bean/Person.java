@@ -1,4 +1,4 @@
-package isep.lab1.bean;
+package src.isep.lab1.bean;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

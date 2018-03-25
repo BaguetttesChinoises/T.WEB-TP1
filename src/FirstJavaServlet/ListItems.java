@@ -1,4 +1,4 @@
-package FirstJavaServlet;
+package src.FirstJavaServlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;

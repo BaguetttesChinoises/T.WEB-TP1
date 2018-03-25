@@ -1,4 +1,4 @@
-package FirstJavaServlet;
+package src.FirstJavaServlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,7 +20,6 @@ public class FirstJavaServlet extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
 	public FirstJavaServlet() {
-		super();
        // TODO Auto-generated constructor stub
     }
 
