@@ -7,13 +7,29 @@ import javax.servlet.http.HttpServlet;
  * Servlet implementation class Person
  */
 @WebServlet("/Person")
-public class Person extends HttpServlet {
+public class Person {
 	
     private String Nom;
     private String Prénom;
     private String Date_de_Naissance;
     private String Sex;
     
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Person() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+    
+	public Person(String nom, String prénom, String date_de_Naissance, String sex) {
+		super();
+		Nom = nom;
+		Prénom = prénom;
+		Date_de_Naissance = date_de_Naissance;
+		Sex = sex;
+	}
+	
     public String getNom() {
         return Nom;
     }
@@ -39,24 +55,4 @@ public class Person extends HttpServlet {
     public void setSex(String Sex) {
         this.Sex = Sex; 
     }
-
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Person() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-	public Person(String nom, String prénom, String date_de_Naissance, String sex) {
-		super();
-		Nom = nom;
-		Prénom = prénom;
-		Date_de_Naissance = date_de_Naissance;
-		Sex = sex;
-	}
-    
-    
-
 }

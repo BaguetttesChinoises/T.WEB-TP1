@@ -7,11 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:useBean id="person" scope="application" type="lab.mvc.model.Person"/>
-<jsp:getProperty property="firstName" name="person"/>
-<jsp:getProperty property="lastName" name="person"/>
-<jsp:getProperty property="birthDay" name="person"/>
-<jsp:getProperty property="sex" name="person"/>
+<jsp:useBean id="person" scope="request" type="lab.mvc.model.Person"/>
+<p><%=person%> ; </p>
+
+<jsp:getProperty property="Nom" name="person"/>
+<%-- <jsp:getProperty property="Prénom" name="person"/> --%>
+<%-- <jsp:getProperty property="Date_de_Naissance" name="person"/> --%>
+<%-- <jsp:getProperty property="Sex" name="person"/> --%>
 
 </body>
 </html>

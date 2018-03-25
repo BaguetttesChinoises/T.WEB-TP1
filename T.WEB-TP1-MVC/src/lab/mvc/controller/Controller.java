@@ -30,16 +30,16 @@ public class Controller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// reads a person’s information passed through the HTML form
-		String Nom = request.getParameter("name");
-		String Prénom = request.getParameter("Last Name");
+		String Nom = request.getParameter("Nom");
+		String Prénom = request.getParameter("Prénom");
 		String Date_de_Naissance = request.getParameter("Date_de_Naissance");
 		String Sex = request.getParameter("Sex");
 		// uses these information to create an instance of the bean Person
-		Person person = new Person (Nom, Prénom, Date_de_Naissance, Date_de_Naissance);
+		Person person = new Person (Nom, Prénom, Date_de_Naissance, Sex);
 		// adds the created bean to the request (using request.setAttribute(..,..))
 		request.setAttribute("person", person);		
 		// forwards the request the appropriate JSP page
-		RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/jspPage.jsp");
+		RequestDispatcher dispatcher=getServletContext().getRequestDispatcher("/young.jsp");
 		dispatcher.include(request, response);
 	}
 
